@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: flywayapp
+#  datasource:
+#    driverClassName: org.postgresql.Driver
+#    url: "jdbc:postgresql://localhost:5432/flydb?autoreconnect=true"
+#    username: "postgres"
+#    password: "postgres"
+#    hikari:
+#      maximum-pool-size: 30
+
+#flyway:
+#  url: jdbc:postgresql://localhost:5432/postgresql
+#  schemas: flydb
+#  user: "postgres"
+#  password: "postgres"
+
+app:
+  datasource:
+    main:
+      driver-class-name: org.postgresql.Driver
+      jdbc-url: jdbc:postgresql://localhost:5432/flydb
+      username: 'postgres'
+      password: 'postgres'
+      pool-size: 30
+
+server:
+  error:
+    include-binding-errors: always
+    include-message: always
